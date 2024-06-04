@@ -1,6 +1,6 @@
 //Establish requirement
-const fs = require('node:fs'); //identify command file
-const path = require('node:path'); //file and directory access assistance
+const fs = require("node:fs"); //identify command file
+const path = require("node:path"); //file and directory access assistance
 const {Client,Collection,Events,GatewayIntentBits} = require("discord.js"); //discord api
 const {token} = require("./config.json"); //keys
 
