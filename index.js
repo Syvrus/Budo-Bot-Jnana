@@ -1,8 +1,8 @@
 //Establish requirement
-const fs = require('node:fs'); //identifies command files
-const path = require('node:path'); //assistance for accessing files and directories
-const {Client,Collection,Events,GatewayIntentBits} = require("discord.js"); //access discord library
-const {token} = require("./config.json"); //bot identifier
+const fs = require('node:fs'); //identify command file
+const path = require('node:path'); //file and directory access assistance
+const {Client,Collection,Events,GatewayIntentBits} = require("discord.js"); //discord api
+const {token} = require("./config.json"); //keys
 
 //Declare client
 const client = new Client({intents: [GatewayIntentBits.Guilds]});
@@ -23,7 +23,7 @@ for(const folder of commandFolders) {
         if('data' in command && 'execute' in command){
             client.commands.set(command.data.name, command); //load command
         } else {
-            console.log(`[WARNING] Command at ${filePath} is missing require "data" or "execute" property.`)
+            console.log(`[WARNING] Command at ${filePath} is missing require "data" or "execute" property.`);
         }
     }
 }
