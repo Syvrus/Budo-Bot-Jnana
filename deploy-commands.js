@@ -1,6 +1,6 @@
 //Establish requirements
 const { REST, Routes } = require("discord.js"); //discord api
-const { clientId, guildId, token } = require("./config.json"); //keys
+const { clientID, guildID, token } = require("./config.json"); //keys
 const fs = require("node:fs"); //identify command file
 const path = require("node:path"); //file and directory access assistance
 //Command list
@@ -31,7 +31,7 @@ const rest = new REST().setToken(token);
         console.log(`Refreshing ${commands.length} (/) commands`); //Start
 
         const data = await rest.put(
-            Routes.applicationGuildCommands(clientId, guildId), //guildId creates server specific update. may omit for global update.
+            Routes.applicationGuildCommands(clientID, guildID), //guildId creates server specific update. may omit for global update.
             { body: commands },
         );
 
