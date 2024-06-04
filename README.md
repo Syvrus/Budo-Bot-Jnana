@@ -8,6 +8,6 @@ User will need Node.js version 22.2.0 installed
 Visual Studio Code highly recommended to start and edit bot
 
 ## Activation
-1. To activate bot, open terminal in folder and enter "node ."
+1. To activate bot, open terminal in folder and enter "node index.js"
 2. Bot should be online
 3. Deactivate but pressing the keystroke: Ctrl + c
